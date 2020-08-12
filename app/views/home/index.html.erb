@@ -1,27 +1,80 @@
-<section class="section">
-  <article class="media">
-    <div class="media-content">
-      <div class="content has-text-centered">
-        <p>
-          <strong class="is-size-1" style="font-family: cursive;">profgram</strong>
-        </p>
-      </div>
-      <div class="columns is-centered">
-        <div class="column is-5">
-          <br>
-          <%= link_to "ログイン", new_user_session_path, class: "button is-warning is-fullwidth" %>
-          <br>
-          <%= link_to "新規登録", new_user_registration_path, class: "button is-warning is-fullwidth" %>
+<div class="home index">
+  <article class="home_page">
+    <div class="contents">    
+        <div class="fade_img">
+          <div class="fade"><%= image_tag  "パラシュート.jpg" %></div>
+          <div class="fade"><%= image_tag  "荒野行動.jpg" %></div>
+          <div class="fade"><%= image_tag  "荒野second.jpg" %></div>
         </div>
-      </div>
+        <div class="front_font">
+          <p class="home_title_one">
+              Official<span class="man"> Juiceman </span>dism   
+          </p>  
+          <div class="home_button">
+            <div class="button_login_one ">
+              <%= link_to "ログイン", new_user_session_path, class: "button" %>    
+            </div>
+            <div class="button_login_two"> 
+              <%= link_to "新規登録", new_user_registration_path, class: "button" %>    
+            </div>
+          </div>
+        </div>
+    </div>   
+  </article>
+  <article class="intro">
+    <h1 class="h1_explanation">
+      What's This Clan
+    </h1>   
+    <div class="intro_img">
+      
+    </div>
+    <p class="intro_font">
+        癖の強い性癖を持ったメンバーたち <br><br>
+        熟女好きや幼女好きが多数在籍し、創始者ジュンをはじめ、犯罪者予備軍の集まる健全なクランである <br>
+    </p>
+  </article>
+
+  <article class="intro_2">
+    <div class="intro_img_2">
+    </div>
+    <h2 class="intro_font_2">
+        Activity
+    </h2>
+    <div class="intro_sentences_2">
+       <p class="mascot">
+          夜になると行動が盛んになる<br>
+          ナニの行動かはお察しの通りである<br>
+          不定期で内戦がある<br>
+          ちなみにかねがもらえる<br>
+          かね、かねである<br>
+
+
+
+       </p>
     </div>
   </article>
-  <br>
-  <div class="columns is-centered">
-    <div class="column">
-      <figure>
-        <div class="main-image"></div>
-      </figure>
+
+  <article class="intro_3">
+    <div class="intro_img_3">
     </div>
-  </div>
-</section>
+    <h3 class="intro_font_3">
+        マスコットキャラクター
+    </h3>
+    <div class="intro_sentences_3">
+       <p class="mascot">
+         クランのマスコットキャラクターである<br>
+         マスコットキャラクターのわりにメンバーからの扱いは雑である
+       </p>
+    </div>
+  </article>
+</div>
+
+
+<script type="text/javascript">
+  $(function(){
+    $(".fade_img .fade:not(:first-child)").hide();
+    setInterval(function() {
+      $(".fade_img .fade:first-child").fadeOut("5000").next(".fade").fadeIn("5000").end().appendTo(".fade_img");
+    },10000);
+  })
+</script>

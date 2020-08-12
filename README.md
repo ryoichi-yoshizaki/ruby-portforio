@@ -22,3 +22,12 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+slim-rails  slimを使えるようにする
+html2slim   erbファイルをslimファイルに変換する
+annotate    dbの情報をmodelファイルに書き込む
+action_args paramsを使いやすくする
+simple_form formをシンプルに書ける
+ransack     検索フォームを簡単に作れる
+kaminari    ページネーションを簡単に作れる
+carrierwave 画像投稿が簡単にできる

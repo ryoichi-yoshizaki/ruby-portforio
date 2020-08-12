@@ -1,8 +1,8 @@
-<section class="hero is-success">
+<section class="">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title">
-         新規投稿作成
+      <h1 class="title_one">
+         today's news post
       </h1>
     </div>
   </div>
@@ -25,17 +25,17 @@
       <div class="column is-6">
         <%= form_for @recipe do |f| %>
           <div class="field">
-            <%= f.label :title, "投稿タイトル", class:"label" %>
+            <%= f.label :title, "TITLE", class:"label" %>
             <%= f.text_field :title, class: "input" %>
           </div>
       
           <div class="field">
-            <%= f.label :body, "投稿内容", class:"label" %>
+            <%= f.label :body, "post-content(内容)", class:"label" %>
             <%= f.text_area :body, class: "textarea" %>
           </div>
 
           <div class="field">
-            <%= f.label :image, "写真", class:"label" %>
+            <%= f.label :image, "PHOTO", class:"label" %>
             <%= f.attachment_field :image, class: "input" %>
           </div>
 
@@ -43,5 +43,8 @@
         <% end %>
       </div>       
     </div>
+  </div>
+  <div class="wilderness_img">
+    <%= image_tag '荒野行動.jpg' %>
   </div>
 </section>    

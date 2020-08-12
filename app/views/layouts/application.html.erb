@@ -4,10 +4,10 @@
     <title>profgram</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous" />
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
   </head>
 
   <body>
@@ -23,68 +23,74 @@
       </div>
     <% end %>
 
-    <nav class="navbar is-warning">
+    <nav class="navbar headers">
       <div class="navbar-brand">
         <%= link_to root_path, class: "navbar-item" do %>
-          <h1 class="title is-4" style="font-family: cursive;">profgram</h1>
+          <h1 class="title is-4 header-title" style="font-family: cursive;">profgram</h1>
         <% end %>
         <div class="navbar-burger" data-target="#navbarExampleTransparentExample" data-toggle="collapse">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span class="humberger-line"></span>
+          <span class="humberger-line"></span>
+          <span class="humberger-line"></span>
         </div>
       </div>
 
       <% if user_signed_in? %>
-        <div id="navbarExampleTransparentExample"  class="navbar-menu collapse" >
-          
-          <div class="navbar-item">
-            <%= link_to "メンバーニュース一覧", recipes_path, class: "navbar-item button is-warning is-light" %>
-          </div>
-          <div class="navbar-item">
-            <%= link_to "個人ニュース投稿", new_recipe_path, class: "navbar-item button is-warning is-light" %>
-          </div>
-
-          <div class="navbar-end">
+        <div id="navbarExampleTransparentExample"  class="navbar-menu  collapse top-menu" >
+            
             <div class="navbar-item">
-              <div class="field is-grouped">
-                <p class="control">
-                  <%= link_to "メンバー一覧", users_path, class: " button is-warning is-light" %>
-                </p>
-                <p class="control">
-                  <%= link_to "マイページ", user_path(current_user), class: "button is-warning is-light" %>
-                </p>
-                <p class="control">
-                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-warning is-light" %>
-                </p>
-              </div>
+              <%= link_to "メンバーニュース一覧", recipes_path, class: " button is-warning is-light" %>
             </div>
-          </div>
-        </div>
+            <div class="navbar-item">
+              <%= link_to "個人ニュース投稿", new_recipe_path, class: " button is-warning is-light" %>
+            </div>
+            <div class="navbar-item">
+                  <p class="member">
+                    <%= link_to "メンバー一覧", users_path, class: " button is-warning is-light" %>
+                  </p>
+            </div>
+            <div class="navbar-item">
+                  <p class="member">
+                    <%= link_to "マイページ", user_path(current_user), class: "button is-warning is-light" %>
+                  </p>
+            </div>
+            <div class="navbar-item">
+                    <p class="member">
+                      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: " button is-warning is-light" %>
+                    </p>
+            </div>
+            
       <% else %>
-        <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div id="navbarExampleTransparentExample" class="navbar-menu top-menu">
           <div class="navbar-item">
-            <%= link_to "個人ニュース一覧", recipes_path, class: "navbar-item button is-warning is-light" %>
+            <p class="member">
+              <%= link_to "個人ニュース一覧", recipes_path, class: "navbar-item button is-warning is-light" %>
+            </p>
           </div>
           <div class="navbar-item">
-            <%= link_to "メンバー一覧", users_path, class: "navbar-item button is-warning is-light" %>
+            <p class="member">
+              <%= link_to "メンバー一覧", users_path, class: "navbar-item button is-warning is-light" %>
+            </p>
           </div>
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="field is-grouped">
-                <p class="control">
-                  <%= link_to "ログイン", new_user_session_path, class: "button is-warning is-light" %>
-                </p>
-                <p class="control">
-                  <%= link_to "新規メンバー登録", new_user_registration_path, class: "button is-warning is-light" %>
-                </p>
-              </div>
-            </div>
+          <div class="navbar-item ">              
+            <p class="member">
+              <%= link_to "ログイン", new_user_session_path, class: "button is-warning is-light" %>
+            </p>
+          </div>
+          <div class="navbar-item">
+            <p class="member">
+              <%= link_to "新規メンバー登録", new_user_registration_path, class: "button is-warning is-light" %>
+            </p>   
           </div>
         </div>
       <% end %>
 
     </nav>
     <%= yield %>
+    <footer>
+      <div class="footers">
+        <p class="copy_right">Copyright ©︎ Official shirudandism Clan</p>
+      </div>
+    </footer>
   </body>
 </html>

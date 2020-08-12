@@ -1,3 +1,267 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.home_page{
+    height: 100%;
+    
+ 
+}
+
+.contents{
+    position: relative;
+    height: 50vw;
+    max-height: 100vh;
+    width: 100%;
+    .fade_img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 2;
+    }
+    .front_font{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        
+        .home_title_one{
+            font-size: 40px;
+            text-shadow: 2px 2px 2px;
+            color: rgb(255, 1, 1);
+            font-family: 'Caveat', cursive;
+            z-index: 999;  
+            .man{
+                color: black;
+            }     
+        }
+    }
+    .home_button{
+        z-index:999;
+    }
+}
+// profgram
+
+// .button_login_one {
+//     margin:  0 auto; 
+//     padding-top: 30%;
+//     width: 40px; 
+// }
+.button_login_one {
+    padding-top: 20px;
+}
+.button_login_two{ 
+    margin-top: 20px;
+}
+$breakpoint-sm: 400px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 1000px !default;
+
+$breakpoints: (
+  'sm': 'screen and (min-width: 400px)',
+  'md': 'screen and (min-width: 768px)',
+  'lg': 'screen and (min-width: 1000px)',
+  'xl': 'screen and (min-width: 1200px)',
+) !default;
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  }
+$margin_article:100px;
+$half_width:50%;
+$sentence:50px;
+// 一枚目ネコたち
+.intro{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: $margin_article auto 0 auto;
+    // what's this clan
+    .h1_explanation{
+        text-shadow: 3px 4px 3px rgb(134, 131, 131);
+        position: relative;
+        display: block;
+        text-align: center;
+        border-bottom: 1px black;
+        font-size: 30px;    
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .h1_explanation::after{
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 80px;
+        border-bottom: 1px solid black;
+        left: 30%;
+        box-shadow: 3px 3px 3px rgb(114, 113, 113);
+    }
+    // ネコの絵
+    .intro_img{
+        background-image: url(cat_img.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 400px;
+        width: 80%;
+        @include mq(md) {  
+            height: 400px;
+            width: 500px;
+            box-shadow: 7px 7px 2px rgb(114, 113, 113);
+            margin-top: 80px;
+          }
+    }
+    // 癖の強い…
+    .intro_font{
+        margin-top: $sentence;
+        display: block;
+        text-align: center;
+        word-wrap: inherit;
+    }
+}
+
+.intro_2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: $margin_article auto 0 auto;
+    @include mq(md) {  
+        flex-direction: row;
+        margin: 200px 0 0 0 ;
+      }
+    // Activityの文字
+    .intro_font_2{
+        margin-top: 50px;
+        text-shadow: 3px 4px 3px rgb(163, 163, 163);
+        text-align: center;
+        order: 1;
+        word-wrap: inherit;
+        position: relative;
+        font-size: 38px;    
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        @include mq(md) { //パソコン用
+            order: 1;
+            
+        }
+    }
+    .intro_font_2::after{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 25%;
+        bottom: 0;
+        width: 50px;
+        border-bottom:1px solid black ;
+        box-shadow: 3px 3px 3px rgb(114, 113, 113);
+    }
+    // クランのマスコット
+    .intro_sentences_2{
+        margin-top: $sentence;
+        text-align: center;
+        word-wrap: inherit;
+        order: 3;  //携帯用
+        @include mq(md) { //パソコン用
+            display: none;
+        }
+    }
+    // ウーパールーパーの写真
+    .intro_img_2{
+        background-image: url(アイコン.jpg);
+        order: 2;
+        background-size: 300px;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        border-radius: 50%;
+        margin-top: 50px;
+        @include mq(md) {
+            background-size: 400px;
+            width: 400px;
+            height: 400px;
+            order: 1;
+            margin-top: 0;
+            order: 2;
+        }
+    }
+}
+
+// 二枚目ウーパールーパー
+.intro_3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: $margin_article auto 0 auto;
+    @include mq(md) { 
+        margin-top: 200px;
+        display: flex; 
+        flex-direction: row;
+      }
+    // マスコットキャラクターの文字
+    .intro_font_3{
+        text-shadow: 3px 4px 3px rgb(163, 163, 163);
+        text-align: center;
+        order: 1;
+        word-wrap: inherit;
+        position: relative;
+        font-size: 30px;    
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        @include mq(md) { //パソコン用
+            order: 2;
+        }
+    }
+    .intro_font_3::after{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 35%;
+        bottom: -5px;
+        width: 80px;
+        border-bottom:1px solid black ;
+        box-shadow: 3px 3px 3px rgb(114, 113, 113);
+    }
+    // クランのマスコット
+    .intro_sentences_3{
+        margin-top: $sentence;
+        text-align: center;
+        word-wrap: inherit;
+        order: 3;  //携帯用
+        @include mq(md) { //パソコン用
+            display: none;
+        }
+    }
+    // ウーパールーパーの写真
+    .intro_img_3{
+        background-image: url(ウーパールーパーsecond.jpg);
+        order: 2;
+        background-size: 420px;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        border-radius: 50%;
+        margin-top: 50px;
+        @include mq(md) {
+            background-size: 530px;
+            width: 400px;
+            height: 400px;
+            order: 1;
+            margin-top: 0;
+        }
+    }
+    
+}
+
+
+
+

@@ -1,54 +1,39 @@
-<section class="hero is-success">
+<section class="hero">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title">
-      マイページ
+      <h1 class="title_one">
+      --- My page ---
       </h1>
     </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-         <div class="columns is-centered">
-           <div class="column is-4">
-             <div class="card-image">
-              <figure class="image is-128*128" style="margin-left: auto; margin-right: auto;"> 
-                <%= attachment_image_tag @user, :profile_image, :fill, 1000,1000,fallback: "no-image.png", class: "profile_image is-rounded" %>
-              </figure>
-              </div>
-             <div class="column is-8">
-               <table class="table is-fullwidth">
-                 <tr>
-                   <td class="is-size-4">
-                     <strong><%= @user.username %></strong>
-                   </td>
-                  <% if @user.id == current_user.id %>
-                   <td class="is-size-4">
-                     <%= @user.email%>
-                   </td>
-                   <td>
-                     <%= link_to "編集", edit_user_path(@user), class: "button is-primary" %>
-                   </td>
-                  <% end %>
-                 </tr>
-               </table>
-               <table class="table is-fullwidth">
-                 <tr>
-                   <td >
-                   <strong><p>自己紹介</p></strong>
-                   <br>
-                    <%= @user.profile %>
-                   </td>
-                 </tr>
-               </table>
-           </div>
-         </div>
+<section class="section"> 
+    <div class="profile">  
+      <div class="card-image">
+        <figure class="top_image" style="margin-left: auto; margin-right: auto;"> 
+          <%= attachment_image_tag @user, :profile_image, :fill, 1000,1000,fallback: "no-image.png", class: "profile_image is-rounded" %>
+        </figure>
       </div>
+
+      <div class="profile_edit">
+        <div class="a_name">
+          <strong><%= @user.username %></strong>
+          <br>
+          <% if @user.id == current_user.id %><% end %>
+          <br>
+          <strong><p>自己紹介</p></strong>
+          <br>
+          <div class="comment">
+            <%= @user.profile %>
+          </div>
+        </div>
+        <div class="edit">
+          <%= @user.email%>
+          <%= link_to "編集", edit_user_path(@user), class: "button" %>
+        </div>
+      </div>  
     </div>
-  </div>  
 </section>
 
 <section class="section">
