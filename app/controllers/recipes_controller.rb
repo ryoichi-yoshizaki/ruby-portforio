@@ -16,7 +16,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(recipe_params)
     @recipe.user_id = current_user.id
     if @recipe.save
-     redirect_to recipe_path(@recipe),notice:"投稿に成功しました"
+     redirect_to recipe_path(@recipe),notice:"投稿成功"
     else
       render :new
     end
@@ -26,14 +26,14 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @user = User.new
     if @recipe.user != current_user
-      redirect_to recipes_path, alert: "不正です"
+      redirect_to recipes_path, alert: "違う人のプロフィールはイじれません、自分のをイじってください"
     end
   end
   
   def update
     @recipe = Recipe.find(params[:id])
     if @recipe.update(recipe_params)
-    redirect_to recipe_path(@recipe),notice:"更新に成功しました"
+    redirect_to recipe_path(@recipe),notice:"更新完了"
     else
       render :edit
     end

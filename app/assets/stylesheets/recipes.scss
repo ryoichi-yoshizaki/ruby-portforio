@@ -1,14 +1,99 @@
 // Place all the styles related to the recipes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$breakpoint-md: 480px !default;
+$breakpoints: (
+  'md': 'screen and (min-width: 480px)',
+) !default;
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  }
+$font_simple :Cambria ,Cochin, Georgia, Times, 'Times New Roman', serif;
 .title_one{
     font-family: 'Caveat', cursive;
     color: white;
-    font-size: 30px;
+    font-size: 5rem;
+    
 }
 .card-font{
     color: red;
 }
+.column{
+    width: 50%!important;
+    
+}
 .wilderness_img{
     margin-top: 50px;
 }
+.button{
+    font-size: 1.3rem!important;
+}
+.times{
+    font-size: 2rem;
+}
+.title{
+    font-size: 3rem!important;
+    font-family: 'Caveat', cursive;
+}
+
+// Details
+.intro_by_name{
+    background-color: #fff;
+    .comment{
+        font-size: 2rem;
+        overflow: scroll;
+        width: 90%;
+        margin: 30px auto 0 auto;
+    }
+    .by_name{
+        font-size: 2rem;
+    }
+}
+.details_content{
+    width: 100%;
+    margin-top: 50px;
+}
+.prof_title{
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    word-wrap: break-word;
+}
+.to_page{
+    font-size: 1.5rem;
+}
+.news{
+    font-size: 2rem;
+    text-align: center;
+    font-family: $font_simple;
+
+}
+.news_content{
+    font-size: 2rem;
+    text-align: center;
+}
+.font_s{
+    font-size: 2rem;
+}
+.content_edit{
+    width: 80%;
+    margin: 0 auto;
+    
+}
+.input, .textarea{
+    // font-size: 2.2rem!important;
+    overflow: scroll;
+}
+.textarea{
+    max-height: 50rem!important;
+    min-height: 15em!important;
+    line-height: 2rem!important;
+    font-size: 1.3rem!important;
+    overflow: scroll;
+}
+// input[type="text"] {
+//     width: 300px;
+//     height: 140px;
+// }

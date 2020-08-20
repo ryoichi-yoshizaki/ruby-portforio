@@ -17,22 +17,22 @@
       </div>
 
       <div class="profile_edit">
-        <div class="a_name">
-          <strong><%= @user.username %></strong>
+        <div class="profs">
+          <p class="name"><%= @user.username %></p>
           <br>
           <% if @user.id == current_user.id %><% end %>
           <br>
-          <strong><p>自己紹介</p></strong>
+          <p class="self_intro">Profile</p>
           <br>
           <div class="comment">
             <%= @user.profile %>
           </div>
         </div>
-        <div class="edit">
-          <%= @user.email%>
-          <%= link_to "編集", edit_user_path(@user), class: "button" %>
-        </div>
       </div>  
+      <div class="edit">
+          <p class="email"><%= @user.email%></p>
+          <p class="henshu"><%= link_to "プロフィール編集", edit_user_path(@user), class: "button" %></p>
+      </div>
     </div>
 </section>
 
@@ -63,19 +63,19 @@
                       <span class="panel-icon">
                       <i class="fas fa-edit"></i>
                       </span>
-                    この内容を編集する
+                    <p class="henshu_button">この内容を編集する</p>
                     <% end %>
                     <%= link_to recipe_path(recipe), method: :delete, data: {confirm: "削除しますか"}, class:"panel-block" do %>
                       <span class="panel-icon">
                         <i class="fas fa-trash"></i>
                       </span>
-                      この内容を削除する
+                      <p class="delete_button">この内容を削除する</p>
                     <% end %>
                   <% end %>  
                 </div>
               </div>
               <div class="content">
-                <time><%= recipe.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
+                <div class="times"><time><%= recipe.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新</div>
               </div>
             </div>
           </div>

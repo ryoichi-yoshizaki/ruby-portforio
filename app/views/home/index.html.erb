@@ -1,5 +1,8 @@
+
+<div class="yodati">サイト制作者 よだちょ デザイン、レスポンシブ未完成、修正中</div>
 <div class="home index">
   <article class="home_page">
+    
     <div class="contents">    
         <div class="fade_img">
           <div class="fade"><%= image_tag  "パラシュート.jpg" %></div>
@@ -10,14 +13,18 @@
           <p class="home_title_one">
               Official<span class="man"> Juiceman </span>dism   
           </p>  
-          <div class="home_button">
+          <%
+=begin%>
+ <div class="home_button">
             <div class="button_login_one ">
               <%= link_to "ログイン", new_user_session_path, class: "button" %>    
             </div>
             <div class="button_login_two"> 
               <%= link_to "新規登録", new_user_registration_path, class: "button" %>    
             </div>
-          </div>
+          </div> 
+<%
+=end%>
         </div>
     </div>   
   </article>
@@ -30,7 +37,8 @@
     </div>
     <p class="intro_font">
         癖の強い性癖を持ったメンバーたち <br><br>
-        熟女好きや幼女好きが多数在籍し、創始者ジュンをはじめ、犯罪者予備軍の集まる健全なクランである <br>
+        熟女好きや幼女好きが多数在籍し、創始者ジュンをはじめ、犯罪者予備軍の集まる健全なクランである <br><br>
+        煽り、死体打ちOK<br>最低限のモラルのある方はぜひご参加ください。ただし、キッズはお断り<br>
     </p>
   </article>
 
@@ -43,12 +51,10 @@
     <div class="intro_sentences_2">
        <p class="mascot">
           夜になると行動が盛んになる<br>
-          ナニの行動かはお察しの通りである<br>
+          主な行動時間は23時から1時半である<br><br>
           不定期で内戦がある<br>
           ちなみにかねがもらえる<br>
-          かね、かねである<br>
-
-
+          かねである<br>
 
        </p>
     </div>
@@ -74,7 +80,7 @@
   $(function(){
     $(".fade_img .fade:not(:first-child)").hide();
     setInterval(function() {
-      $(".fade_img .fade:first-child").fadeOut("5000").next(".fade").fadeIn("5000").end().appendTo(".fade_img");
-    },10000);
+      $(".fade_img .fade:first-child").fadeOut("3500").next(".fade").fadeIn("3500").end().appendTo(".fade_img");
+    },7000);
   })
 </script>

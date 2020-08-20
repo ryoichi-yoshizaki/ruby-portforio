@@ -1,13 +1,23 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$breakpoint-md: 480px !default;
+
+$breakpoints: (
+  'md': 'screen and (min-width: 920px)',
+) !default;
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  }
 
 .home_page{
     height: 100%;
-    
- 
 }
-
+.yodati{
+    display: none;
+}
 .contents{
     position: relative;
     height: 50vw;
@@ -29,13 +39,19 @@
         justify-content: space-evenly;
         
         .home_title_one{
-            font-size: 40px;
-            text-shadow: 2px 2px 2px;
+            font-size: 2.6rem;
+            text-shadow: 2px 2px 8px;
             color: rgb(255, 1, 1);
             font-family: 'Caveat', cursive;
             z-index: 999;  
+            @include mq(md) {  
+               font-size: 6.2rem;
+               text-shadow: 2px 2px 12px;
+               
+            }
             .man{
-                color: black;
+                color: rgb(255, 1, 1);
+                
             }     
         }
     }
@@ -56,22 +72,11 @@
 .button_login_two{ 
     margin-top: 20px;
 }
-$breakpoint-sm: 400px !default;
-$breakpoint-md: 768px !default;
-$breakpoint-lg: 1000px !default;
 
-$breakpoints: (
-  'sm': 'screen and (min-width: 400px)',
-  'md': 'screen and (min-width: 768px)',
-  'lg': 'screen and (min-width: 1000px)',
-  'xl': 'screen and (min-width: 1200px)',
-) !default;
-@mixin mq($breakpoint: md) {
-    @media #{map-get($breakpoints, $breakpoint)} {
-      @content;
-    }
-  }
-$margin_article:100px;
+
+
+
+$margin_article:120px;
 $half_width:50%;
 $sentence:50px;
 // 一枚目ネコたち
@@ -84,13 +89,16 @@ $sentence:50px;
     margin: $margin_article auto 0 auto;
     // what's this clan
     .h1_explanation{
-        text-shadow: 3px 4px 3px rgb(134, 131, 131);
+        text-shadow: 3px 4px 10px ;
         position: relative;
         display: block;
         text-align: center;
         border-bottom: 1px black;
         font-size: 30px;    
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: 'Caveat', cursive;
+        @include mq(md) {  
+            font-size: 3.5rem;
+         }
     }
     .h1_explanation::after{
         content: "";
@@ -100,7 +108,12 @@ $sentence:50px;
         width: 80px;
         border-bottom: 1px solid black;
         left: 30%;
-        box-shadow: 3px 3px 3px rgb(114, 113, 113);
+        box-shadow: 3px 3px 10px;
+        @include mq(md) {  
+            width: 130px;
+            border-bottom: 1px solid black;
+            left: 35%;
+        }
     }
     // ネコの絵
     .intro_img{
@@ -111,9 +124,6 @@ $sentence:50px;
         height: 400px;
         width: 80%;
         @include mq(md) {  
-            height: 400px;
-            width: 500px;
-            box-shadow: 7px 7px 2px rgb(114, 113, 113);
             margin-top: 80px;
           }
     }
@@ -123,6 +133,10 @@ $sentence:50px;
         display: block;
         text-align: center;
         word-wrap: inherit;
+        @include mq(md) {  
+            margin-top: 120px;
+            font-size: 2rem;
+          }
     }
 }
 
@@ -132,23 +146,18 @@ $sentence:50px;
     align-items: center;
     justify-content: space-around;
     margin: $margin_article auto 0 auto;
-    @include mq(md) {  
-        flex-direction: row;
-        margin: 200px 0 0 0 ;
-      }
     // Activityの文字
     .intro_font_2{
         margin-top: 50px;
-        text-shadow: 3px 4px 3px rgb(163, 163, 163);
+        text-shadow: 3px 4px 10px ;
         text-align: center;
         order: 1;
         word-wrap: inherit;
         position: relative;
         font-size: 38px;    
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: 'Caveat', cursive;
         @include mq(md) { //パソコン用
-            order: 1;
-            
+            font-size: 3.5rem;
         }
     }
     .intro_font_2::after{
@@ -159,37 +168,42 @@ $sentence:50px;
         bottom: 0;
         width: 50px;
         border-bottom:1px solid black ;
-        box-shadow: 3px 3px 3px rgb(114, 113, 113);
+        box-shadow: 3px 3px 3px ;
+        @include mq(md) { //パソコン用
+            left: 30%;
+            box-shadow: 3px 3px 10px ;
+            width: 60px;
+        }
+
     }
-    // クランのマスコット
+    // 夜になると文章
     .intro_sentences_2{
         margin-top: $sentence;
         text-align: center;
         word-wrap: inherit;
         order: 3;  //携帯用
         @include mq(md) { //パソコン用
-            display: none;
+            margin-top: 120px;
+            font-size: 2rem;
         }
     }
-    // ウーパールーパーの写真
+    // アイコンの写真
     .intro_img_2{
-        background-image: url(アイコン.jpg);
+        background-image: url(汁.jpg);
         order: 2;
         background-size: 300px;
         background-position: center;
         background-repeat: no-repeat;
-        width: 300px;
-        height: 300px;
+        width: 290px;
+        height: 290px;
         border: 1px solid black;
         border-radius: 50%;
         margin-top: 50px;
         @include mq(md) {
-            background-size: 400px;
-            width: 400px;
-            height: 400px;
-            order: 1;
-            margin-top: 0;
-            order: 2;
+            background-size: 500px;
+            margin-top: 80px;
+            width: 480px;
+            height: 480px;
         }
     }
 }
@@ -203,8 +217,6 @@ $sentence:50px;
     margin: $margin_article auto 0 auto;
     @include mq(md) { 
         margin-top: 200px;
-        display: flex; 
-        flex-direction: row;
       }
     // マスコットキャラクターの文字
     .intro_font_3{
@@ -216,7 +228,7 @@ $sentence:50px;
         font-size: 30px;    
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         @include mq(md) { //パソコン用
-            order: 2;
+            font-size: 3rem;
         }
     }
     .intro_font_3::after{
@@ -228,6 +240,9 @@ $sentence:50px;
         width: 80px;
         border-bottom:1px solid black ;
         box-shadow: 3px 3px 3px rgb(114, 113, 113);
+        @include mq(md) { //パソコン用
+            width: 180px;
+        }
     }
     // クランのマスコット
     .intro_sentences_3{
@@ -236,7 +251,8 @@ $sentence:50px;
         word-wrap: inherit;
         order: 3;  //携帯用
         @include mq(md) { //パソコン用
-            display: none;
+            font-size: 2rem;
+            margin-top: 120px;
         }
     }
     // ウーパールーパーの写真
@@ -255,11 +271,9 @@ $sentence:50px;
             background-size: 530px;
             width: 400px;
             height: 400px;
-            order: 1;
-            margin-top: 0;
+            margin-top: 90px;
         }
     }
-    
 }
 
 

@@ -1,7 +1,7 @@
 <section class="hero">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title">
+      <h1 class="title_one">
          --- Details ---
       </h1>
     </div>
@@ -9,9 +9,27 @@
 </section>
 
 <section class="section">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-7">
+  <div class="">
+      <div class="intro_by_name">
+        <article class="panel is-link">
+          <div class="panel-heading by_name">
+            By <%= @recipe.user.username %>
+          </div>
+          <div class="panel-block">
+            <p class="comment">
+              <%= @recipe.user.profile %>
+            </p>
+          </div>
+          <%= link_to user_path(@recipe.user), class: "panel-block" do %>
+            <span class="panel-icon">
+              <i class="fas fa-user" aria-hidden="true"></i>
+            </span>
+            <p class="to_page"><%= @recipe.user.username %> さんのページへ</p>
+          <% end %>
+        </article>
+      </div>
+
+      <div class="details_content">
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by3">
@@ -21,16 +39,16 @@
           <div class="card-content">
             <div class="media">
               <div class="media-content">
-                <p class="title is-4"><%= @recipe.title %></p>
+                <p class="prof_title"><%= @recipe.title %></p>
               </div>
             </div>
             <div class="content">
               <table class="table is-narrow">
                 <tr>
-                  <th>ニュース</th>
+                  <th class="news">News</th>
                 </tr>
                 <tr>
-                  <td><%= simple_format @recipe.body %></td>
+                  <td class="news_content"><%= simple_format @recipe.body %></td>
                 </tr>
               </table>
               <% if @recipe.user.id == current_user.id %>
@@ -41,24 +59,7 @@
         </div>
       </div>
 
-      <div class="column is-4">
-        <article class="panel is-link">
-          <p class="panel-heading">
-            By <%= @recipe.user.username %>
-          </p>
-          <div class="panel-block">
-            <p class="control">
-              <%= @recipe.user.profile %>
-            </p>
-          </div>
-          <%= link_to user_path(@recipe.user), class: "panel-block" do %>
-            <span class="panel-icon">
-              <i class="fas fa-user" aria-hidden="true"></i>
-            </span>
-            <%= @recipe.user.username %> さんのページへ
-          <% end %>
-        </article>
-      </div>
-    </div>
+      
+    
   </div>
 </section>

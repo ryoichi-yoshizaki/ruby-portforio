@@ -2,7 +2,7 @@
   <div class="hero-body">
     <div class="container">
       <h1 class="title_one">
-      --- User edit ---
+      --- Profile Contents ---
       </h1>
     </div>
   </div>
@@ -27,17 +27,17 @@
       <div class="column is-6">
         <%= form_for @user do |f| %>
           <div class="field">
-           <%= f.label :username, "ユーザー名", class: "label" %>
+           <%= f.label :username, "荒野名", class: "label" %>
            <%= f.text_field :username, class: "input" %>
           </div>
 
           <div class="field">
-           <%= f.label :email, "メールアドレス", class: "label" %>
+           <%= f.label :email, "メールアドレス(非公開)", class: "label" %>
            <%= f.text_field :email, class: "input" %>
           </div>
 
           <div class="field">
-           <%= f.label :profile, "プロフィール", class: "label" %>
+           <%= f.label :profile, "プロフィール(LINE名書いてね)", class: "label" %>
            <%= f.text_area :profile, class: "textarea" %>
           </div>
 

@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def edit
     @user = User.find(params[:id])
     if @user != current_user
-      redirect_to users_path,alert:"不正です"
+      redirect_to users_path,alert:"違う人のプロフィールはイじれません、自分のをイじってください"
     end
   end
   
