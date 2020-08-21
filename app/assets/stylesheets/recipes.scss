@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $breakpoint-md: 480px !default;
 $breakpoints: (
-  'md': 'screen and (min-width: 480px)',
+  'md': 'screen and (max-width: 680px)',
 ) !default;
 @mixin mq($breakpoint: md) {
     @media #{map-get($breakpoints, $breakpoint)} {
@@ -20,15 +20,14 @@ $font_simple :Cambria ,Cochin, Georgia, Times, 'Times New Roman', serif;
 .card-font{
     color: red;
 }
-.column{
-    width: 50%!important;
-    
-}
 .wilderness_img{
     margin-top: 50px;
 }
-.button{
-    font-size: 1.3rem!important;
+.navbar-item .button{
+    font-size: 1.5rem;
+    @include mq(md) {  
+        font-size: 1rem;
+     }
 }
 .times{
     font-size: 2rem;
@@ -36,6 +35,13 @@ $font_simple :Cambria ,Cochin, Georgia, Times, 'Times New Roman', serif;
 .title{
     font-size: 3rem!important;
     font-family: 'Caveat', cursive;
+}
+.my_title{
+    font-size: 2.5rem;
+    font-weight: bold;
+    @include mq(md) {  
+        font-size: 2rem;
+     }
 }
 
 // Details

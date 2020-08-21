@@ -48,7 +48,7 @@
   z-index: 999;
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 680px) {
   .contents .front_font .home_title_one {
     font-size: 6.2rem;
     text-shadow: 2px 2px 12px;
@@ -99,7 +99,7 @@
   font-family: 'Caveat', cursive;
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 680px) {
   .intro .h1_explanation {
     font-size: 3.5rem;
   }
@@ -117,7 +117,7 @@
           box-shadow: 3px 3px 10px;
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 680px) {
   .intro .h1_explanation::after {
     width: 130px;
     border-bottom: 1px solid black;
@@ -134,7 +134,7 @@
   width: 80%;
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 680px) {
   .intro .intro_img {
     margin-top: 80px;
   }
@@ -147,7 +147,7 @@
   word-wrap: inherit;
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 680px) {
   .intro .intro_font {
     margin-top: 120px;
     font-size: 2rem;
@@ -183,7 +183,7 @@
   font-family: 'Caveat', cursive;
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 680px) {
   .intro_2 .intro_font_2 {
     font-size: 3.5rem;
   }
@@ -201,7 +201,7 @@
           box-shadow: 3px 3px 3px;
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 680px) {
   .intro_2 .intro_font_2::after {
     left: 30%;
     -webkit-box-shadow: 3px 3px 10px;
@@ -219,7 +219,7 @@
           order: 3;
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 680px) {
   .intro_2 .intro_sentences_2 {
     margin-top: 120px;
     font-size: 2rem;
@@ -241,7 +241,7 @@
   margin-top: 50px;
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 680px) {
   .intro_2 .intro_img_2 {
     background-size: 500px;
     margin-top: 80px;
@@ -266,7 +266,7 @@
   margin: 120px auto 0 auto;
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 680px) {
   .intro_3 {
     margin-top: 200px;
   }
@@ -284,7 +284,7 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 680px) {
   .intro_3 .intro_font_3 {
     font-size: 3rem;
   }
@@ -302,7 +302,7 @@
           box-shadow: 3px 3px 3px #727171;
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 680px) {
   .intro_3 .intro_font_3::after {
     width: 180px;
   }
@@ -317,7 +317,7 @@
           order: 3;
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 680px) {
   .intro_3 .intro_sentences_3 {
     font-size: 2rem;
     margin-top: 120px;
@@ -339,7 +339,7 @@
   margin-top: 50px;
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 680px) {
   .intro_3 .intro_img_3 {
     background-size: 530px;
     width: 400px;

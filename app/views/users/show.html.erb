@@ -40,7 +40,7 @@
   <div class="container">
     <div class="columns is-multiline">
       <% @user.recipes.each do |recipe| %>
-        <div class="column is-4">
+        <div class="my_contents">
           <div class="card">
             <div class="card-image">
               <figure class="iamge is-4by3">
@@ -55,7 +55,7 @@
                   
                   <%= link_to recipe_path(recipe), class: "panel-block" do %>
                     <%#<span class="panel-icon"><i class="fas fa-book"></i></span>%>
-                    <p class="title"><%= recipe.title %></p>
+                    <p class="my_title"><%= recipe.title %></p>
                     
                   <% end %>
                   <% if @user.id == current_user.id %>

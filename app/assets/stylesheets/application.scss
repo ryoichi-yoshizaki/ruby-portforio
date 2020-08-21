@@ -25,15 +25,21 @@
 //   background-size: contain;
   
 // }
-$breakpoint-md: 480px !default;
+
 $breakpoints: (
-  'md': 'screen and (min-width: 920px)',
+  'md': 'screen and (max-width: 680px)',
+  'ms': 'screen and (min-width: 800px)',
 ) !default;
 @mixin mq($breakpoint: md) {
     @media #{map-get($breakpoints, $breakpoint)} {
       @content;
     }
   }
+@mixin mq($breakpoint: ms) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
 .profgram{
   color: white;
   font-size: 2.8rem;
@@ -49,6 +55,9 @@ body{
   .titles{
     font-size: 2.5rem;
     font-weight: bold;
+    @include mq(md) {  
+      font-size: 1.7rem;
+   }
   }
 }
 .header-title{
@@ -59,26 +68,44 @@ body{
 .humberger-lines{
   color: white;
 }
+.navbar-menu{
+  overflow: scroll;
+  
+}
 .navbar-burger span{
   width: 40px;
   height: 3px;
-  
+  @include mq(md) {  
+    width: 20px;
+    height: 1px;
+  }
 }
 .navbar-burger span:nth-child(1) {
   top: 40%;
-  
+  @include mq(md) {  
+    top: 43%;
+  }
 }
 .navbar-burger span:nth-child(2){
   top: 60%;
+  @include mq(md) {  
+    top: 50%;
+  }
 }
 .navbar-burger span:nth-child(3){
   top: 80%;
+  @include mq(md) {  
+    top: 57%;
+  }
 }
 .navbars{
   height: 5px;
 }
 .navbar-burger{
   margin: 0 40px 0 auto;
+  @include mq(md) {  
+    margin: 0 10px 0 auto;
+  }
 }
 .profile_image {
   border-radius: 50%;
@@ -124,15 +151,15 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+
   // font-size: 100px;
   .copy_right{
       color: white;
       margin: 0 auto;
-      font-size: 1.2rem;
+      font-size: 2rem;
       @include mq(md) {  
-        font-size: 2rem;
-     }
-
+        font-size: 1rem;
+      }
   }
 }
 // .log-out{

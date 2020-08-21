@@ -5,7 +5,7 @@ $font-oshare : 'Caveat', cursive;
 $font_simple :Cambria ,Cochin, Georgia, Times, 'Times New Roman', serif;
 $breakpoint-md: 480px !default;
 $breakpoints: (
-  'md': 'screen and (min-width: 480px)',
+  'md': 'screen and (max-width: 680px)',
 ) !default;
 @mixin mq($breakpoint: md) {
     @media #{map-get($breakpoints, $breakpoint)} {
@@ -21,9 +21,9 @@ $breakpoints: (
 .title_one{
     font-family: 'Caveat', cursive;
     color: white;
-    font-size: 30px;
+    font-size: 3rem;
     @include mq(md) {  
-        font-size: 40px;
+        font-size: 2.5rem;
      }
 }
 .profile{
@@ -37,7 +37,7 @@ $breakpoints: (
         position: relative;
         margin: 60px auto 0 auto;
         background-color: #fff;  
-        height: 450px;
+        height: 400px;
         width: 50%;
         overflow: scroll;
         .profs{
@@ -48,16 +48,25 @@ $breakpoints: (
             .name{
                 font-size: 2rem;
                 font-weight: bold;
+                @include mq(md) {  
+                    font-size: 1.4rem;
+                  }
             }
             .self_intro{
                 font-size: 2rem;
                 font-weight: bold;
                 font-family: $font_simple;
+                @include mq(md) {  
+                    font-size: 1.4rem;
+                  }
             }
             .comment{
                 width: 80%;
                 word-wrap: break-word;
                 font-size: 2rem;
+                @include mq(md) {  
+                    font-size: 1rem;
+                  }
             }
         }
     }
@@ -70,21 +79,36 @@ $breakpoints: (
         padding-top: 25px;
         .email{
             font-size: 2rem;
+            @include mq(md) {  
+                font-size: 1rem;
+              }
         }
         .henshu{
             margin-top: 15px;
             padding-bottom: 10px;
+            @include mq(md) {  
+                font-size: 1rem;
+              }
         }
     }
 }
 .henshu_button{
     font-size: 2rem;
+    @include mq(md) {  
+        font-size: 1rem;
+      }
 }
 .delete_button{
     font-size: 2rem;
+    @include mq(md) {  
+        font-size: 1rem;
+      }
 }
 .times{
     font-size: 2rem;
+    @include mq(md) {  
+        font-size: 1rem;
+      }
 }
 
 
@@ -149,6 +173,9 @@ $breakpoints: (
     font-size: 1.5rem;
 }
 // My page
+.my_contents{
+    width: 50%;
+}
 .card-image{
     margin: 0 auto;
 }
