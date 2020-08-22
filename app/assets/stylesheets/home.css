@@ -48,6 +48,12 @@
   z-index: 999;
 }
 
+@media screen and (max-width: 680px) {
+  .contents .front_font .home_title_one {
+    font-size: 2rem;
+  }
+}
+
 .contents .front_font .home_title_one .man {
   color: #ff0101;
 }
@@ -241,6 +247,9 @@
 
 @media screen and (max-width: 680px) {
   .intro_2 .intro_img_2 {
+    width: 220px;
+    height: 220px;
+    background-size: 240px;
     margin-top: 80px;
   }
 }
@@ -275,7 +284,7 @@
 
 @media screen and (max-width: 680px) {
   .intro_3 .intro_font_3 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -310,6 +319,7 @@
   .intro_3 .intro_sentences_3 {
     font-size: 1.2rem;
     margin-top: 120px;
+    width: 90%;
   }
 }
 
@@ -330,6 +340,9 @@
 
 @media screen and (max-width: 680px) {
   .intro_3 .intro_img_3 {
+    width: 240px;
+    height: 240px;
+    background-size: 360px;
     margin-top: 90px;
   }
 }

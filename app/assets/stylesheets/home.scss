@@ -45,6 +45,7 @@ $breakpoints: (
       font-family: "Caveat", cursive;
       z-index: 999;
       @include mq(md) {
+          font-size: 2rem;
         // font-size: 6.2rem;
         // text-shadow: 2px 2px 12px;
       }
@@ -187,7 +188,7 @@ $sentence: 50px;
       font-size: 1.2rem;
     }
   }
-  // アイコンの写真
+  // 汁の写真
   .intro_img_2 {
     background-image: url("汁.jpg");
     order: 2;
@@ -201,6 +202,9 @@ $sentence: 50px;
     margin-top: 50px;
     @include mq(md) {
       //   background-size: 500px;
+      width: 220px;
+      height: 220px;
+      background-size: 240px;
       margin-top: 80px;
       //   width: 480px;
       //   height: 480px;
@@ -228,7 +232,7 @@ $sentence: 50px;
     font-size: 30px;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     @include mq(md) {
-      font-size: 2rem;
+      font-size: 1.7rem;
     }
   }
   .intro_font_3::after {
@@ -254,6 +258,7 @@ $sentence: 50px;
       //パソコン用
       font-size: 1.2rem;
       margin-top: 120px;
+      width: 90%;
     }
   }
   // ウーパールーパーの写真
@@ -269,6 +274,9 @@ $sentence: 50px;
     border-radius: 50%;
     margin-top: 50px;
     @include mq(md) {
+      width: 240px;
+      height: 240px;
+      background-size: 360px;
       margin-top: 90px;
     }
   }
