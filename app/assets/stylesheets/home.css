@@ -44,15 +44,8 @@
   font-size: 2.6rem;
   text-shadow: 2px 2px 8px;
   color: #ff0101;
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
   z-index: 999;
-}
-
-@media screen and (min-width: 680px) {
-  .contents .front_font .home_title_one {
-    font-size: 6.2rem;
-    text-shadow: 2px 2px 12px;
-  }
 }
 
 .contents .front_font .home_title_one .man {
@@ -89,6 +82,12 @@
   margin: 120px auto 0 auto;
 }
 
+@media screen and (max-width: 680px) {
+  .intro {
+    margin-top: 50px;
+  }
+}
+
 .intro .h1_explanation {
   text-shadow: 3px 4px 10px;
   position: relative;
@@ -96,12 +95,12 @@
   text-align: center;
   border-bottom: 1px black;
   font-size: 30px;
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
 }
 
-@media screen and (min-width: 680px) {
+@media screen and (max-width: 680px) {
   .intro .h1_explanation {
-    font-size: 3.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -117,11 +116,11 @@
           box-shadow: 3px 3px 10px;
 }
 
-@media screen and (min-width: 680px) {
+@media screen and (max-width: 680px) {
   .intro .h1_explanation::after {
-    width: 130px;
+    width: 80px;
     border-bottom: 1px solid black;
-    left: 35%;
+    left: 30%;
   }
 }
 
@@ -134,9 +133,9 @@
   width: 80%;
 }
 
-@media screen and (min-width: 680px) {
+@media screen and (max-width: 680px) {
   .intro .intro_img {
-    margin-top: 80px;
+    height: 300px;
   }
 }
 
@@ -147,10 +146,9 @@
   word-wrap: inherit;
 }
 
-@media screen and (min-width: 680px) {
+@media screen and (max-width: 680px) {
   .intro .intro_font {
-    margin-top: 120px;
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -180,12 +178,13 @@
   word-wrap: inherit;
   position: relative;
   font-size: 38px;
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
 }
 
-@media screen and (min-width: 680px) {
+@media screen and (max-width: 680px) {
   .intro_2 .intro_font_2 {
-    font-size: 3.5rem;
+    margin-top: 0;
+    font-size: 2rem;
   }
 }
 
@@ -201,12 +200,12 @@
           box-shadow: 3px 3px 3px;
 }
 
-@media screen and (min-width: 680px) {
+@media screen and (max-width: 680px) {
   .intro_2 .intro_font_2::after {
     left: 30%;
     -webkit-box-shadow: 3px 3px 10px;
             box-shadow: 3px 3px 10px;
-    width: 60px;
+    width: 40px;
   }
 }
 
@@ -219,15 +218,14 @@
           order: 3;
 }
 
-@media screen and (min-width: 680px) {
+@media screen and (max-width: 680px) {
   .intro_2 .intro_sentences_2 {
-    margin-top: 120px;
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
 }
 
 .intro_2 .intro_img_2 {
-  background-image: url(汁.jpg);
+  background-image: url("汁.jpg");
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -241,12 +239,9 @@
   margin-top: 50px;
 }
 
-@media screen and (min-width: 680px) {
+@media screen and (max-width: 680px) {
   .intro_2 .intro_img_2 {
-    background-size: 500px;
     margin-top: 80px;
-    width: 480px;
-    height: 480px;
   }
 }
 
@@ -266,12 +261,6 @@
   margin: 120px auto 0 auto;
 }
 
-@media screen and (min-width: 680px) {
-  .intro_3 {
-    margin-top: 200px;
-  }
-}
-
 .intro_3 .intro_font_3 {
   text-shadow: 3px 4px 3px #a3a3a3;
   text-align: center;
@@ -281,12 +270,12 @@
   word-wrap: inherit;
   position: relative;
   font-size: 30px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-@media screen and (min-width: 680px) {
+@media screen and (max-width: 680px) {
   .intro_3 .intro_font_3 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
@@ -302,9 +291,9 @@
           box-shadow: 3px 3px 3px #727171;
 }
 
-@media screen and (min-width: 680px) {
+@media screen and (max-width: 680px) {
   .intro_3 .intro_font_3::after {
-    width: 180px;
+    width: 80px;
   }
 }
 
@@ -317,9 +306,9 @@
           order: 3;
 }
 
-@media screen and (min-width: 680px) {
+@media screen and (max-width: 680px) {
   .intro_3 .intro_sentences_3 {
-    font-size: 2rem;
+    font-size: 1.2rem;
     margin-top: 120px;
   }
 }
@@ -339,11 +328,8 @@
   margin-top: 50px;
 }
 
-@media screen and (min-width: 680px) {
+@media screen and (max-width: 680px) {
   .intro_3 .intro_img_3 {
-    background-size: 530px;
-    width: 400px;
-    height: 400px;
     margin-top: 90px;
   }
 }
