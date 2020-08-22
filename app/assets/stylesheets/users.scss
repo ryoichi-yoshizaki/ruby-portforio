@@ -88,6 +88,7 @@ $breakpoints: (
       }
     .email {
       font-size: 2rem;
+      overflow: scroll;
       @include mq-down(md) {
         font-size: 1rem;
       }
@@ -99,7 +100,13 @@ $breakpoints: (
         font-size: 1rem;
       }
     }
+    
   }
+}
+.card .media:not(:last-child){
+    @include mq-down(md) {
+        margin-left: 0;
+      }     
 }
 // この内容を編集する
 .henshu_button {
