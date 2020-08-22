@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
 @import "bulma";
 .notification:not(:last-child) {
   margin-bottom: 0;
@@ -28,7 +29,7 @@
 
 $breakpoints: (
   'md': 'screen and (max-width: 680px)',
-  'ms': 'screen and (min-width: 800px)',
+  
 ) !default;
 @mixin mq($breakpoint: md) {
     @media #{map-get($breakpoints, $breakpoint)} {
@@ -53,12 +54,13 @@ body{
   background-color: rgb(0, 0, 0);
   box-shadow:  rgb(0, 0, 0) 10px 3px 20px; 
   .titles{
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     @include mq(md) {  
-      font-size: 1.7rem;
+      font-size: 1.5rem;
    }
   }
+  
 }
 .header-title{
   margin-left: 20px;
@@ -107,7 +109,7 @@ body{
     margin: 0 10px 0 auto;
   }
 }
-.profile_image {
+.is-rounded {
   border-radius: 50%;
 }
 .navber-item{

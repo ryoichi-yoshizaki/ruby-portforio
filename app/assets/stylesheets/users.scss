@@ -1,181 +1,198 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$font-oshare : 'Caveat', cursive;
-$font_simple :Cambria ,Cochin, Georgia, Times, 'Times New Roman', serif;
-$breakpoint-md: 480px !default;
+$font-oshare: "Caveat", cursive;
+$font_simple: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+$breakpoint-md: 680px !default;
 $breakpoints: (
-  'md': 'screen and (max-width: 680px)',
+  "md": " (max-width: 680px)",
 ) !default;
-@mixin mq($breakpoint: md) {
-    @media #{map-get($breakpoints, $breakpoint)} {
-      @content;
+@mixin mq-down($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+// My page
+#sections {
+  padding: 0;
+  height: 100%;
+  margin-top: 60px;
+}
+.title_one {
+  font-family: "Caveat", cursive;
+  color: white;
+  font-size: 4rem;
+  @include mq-down(md) {
+    font-size: 2.5rem;
+  }
+}
+.profile {
+  width: 100%;
+  .top_image {
+    width: 60%;
+    height: 60%;
+    margin: 0 20% !important;
+  }
+  .profile_edit {
+    position: relative;
+    margin: 60px auto 0 auto;
+    background-color: #fff;
+    height: 400px;
+    width: 50%;
+    overflow: scroll;
+    @include mq-down(md) {
+        height: 250px;
+        width: 70%;
+      }
+    .profs {
+      position: absolute;
+      top: 10%;
+      left: 13%;
+      width: 100%;
+      .name {
+        font-size: 2rem;
+        font-weight: bold;
+        word-wrap: break-word;
+        @include mq-down(md) {
+          font-size: 1.8rem;
+          
+        }
+      }
+      .self_intro {
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: $font_simple;
+        @include mq-down(md) {
+          font-size: 1.4rem;
+        }
+      }
+      .comment {
+        width: 80%;
+        word-wrap: break-word;
+        font-size: 2rem;
+        @include mq-down(md) {
+          font-size: 1.3rem;
+        }
+      }
     }
   }
-// My page
-#sections{
-    padding: 0;
-    height: 100%;
-    margin-top: 60px;
-}
-.title_one{
-    font-family: 'Caveat', cursive;
-    color: white;
-    font-size: 3rem;
-    @include mq(md) {  
-        font-size: 2.5rem;
-     }
-}
-.profile{
-    width: 100%;
-    .top_image{
-        width: 60%;
-        height: 60%;
-        margin: 0 20%!important;
-    }
-    .profile_edit{
-        position: relative;
-        margin: 60px auto 0 auto;
-        background-color: #fff;  
-        height: 400px;
-        width: 50%;
-        overflow: scroll;
-        .profs{
-            position: absolute;
-            top: 10%;
-            left: 13%;
-            width: 100%;
-            .name{
-                font-size: 2rem;
-                font-weight: bold;
-                @include mq(md) {  
-                    font-size: 1.4rem;
-                  }
-            }
-            .self_intro{
-                font-size: 2rem;
-                font-weight: bold;
-                font-family: $font_simple;
-                @include mq(md) {  
-                    font-size: 1.4rem;
-                  }
-            }
-            .comment{
-                width: 80%;
-                word-wrap: break-word;
-                font-size: 2rem;
-                @include mq(md) {  
-                    font-size: 1rem;
-                  }
-            }
-        }
-    }
-    .edit{
-        white-space: nowrap;
-        margin: 0 auto;
-        background-color: #fff;
-        width: 50%;
-        text-align: center;
-        padding-top: 25px;
-        .email{
-            font-size: 2rem;
-            @include mq(md) {  
-                font-size: 1rem;
-              }
-        }
-        .henshu{
-            margin-top: 15px;
-            padding-bottom: 10px;
-            @include mq(md) {  
-                font-size: 1rem;
-              }
-        }
-    }
-}
-.henshu_button{
-    font-size: 2rem;
-    @include mq(md) {  
+  .edit {
+    white-space: nowrap;
+    margin: 0 auto;
+    background-color: #fff;
+    width: 50%;
+    text-align: center;
+    padding-top: 25px;
+    @include mq-down(md) {
+        width: 70%;
+      }
+    .email {
+      font-size: 2rem;
+      @include mq-down(md) {
         font-size: 1rem;
       }
-}
-.delete_button{
-    font-size: 2rem;
-    @include mq(md) {  
+    }
+    .henshu {
+      margin-top: 15px;
+      padding-bottom: 10px;
+      @include mq-down(md) {
         font-size: 1rem;
       }
+    }
+  }
 }
-.times{
-    font-size: 2rem;
-    @include mq(md) {  
-        font-size: 1rem;
+// この内容を編集する
+.henshu_button {
+  font-size: 2rem;
+  @include mq-down(md) {
+    font-size: 1rem;
+  }
+}
+.delete_button {
+  font-size: 2rem;
+  @include mq-down(md) {
+    font-size: 1rem;
+  }
+}
+.times {
+  font-size: 2rem;
+  padding: 0 0 5px 10px;
+  @include mq-down(md) {
+    font-size: 1rem;
+  }
+}
+.card-content{
+    padding: 0!important;
+    @include mq-down(md) {
+        padding: 0!important;
       }
 }
-
-
 
 // Login menu
-.login_gamen{
-    margin: 30px 0  0 50px;
-    font-family: 'Caveat', cursive;
-    color: white;
-    font-size: 3.5rem;   
+.login_gamen {
+  margin: 30px 0 0 50px;
+  font-family: "Caveat", cursive;
+  color: white;
+  font-size: 3.5rem;
 }
-.register{
-    width: 50%;
-    margin: 0 auto;
-    display: block;
+.register {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
 }
-.label{
-    
-    font-weight: initial!important;
-    margin-bottom: 0!important;
+.label {
+  font-weight: initial !important;
+  margin-bottom: 0 !important;
 }
-.icon{
-    margin-top: 20px;
+.icon {
+  margin-top: 20px;
 }
-.input{
-    margin-top: 20px;
+.input {
+  margin-top: 20px;
 }
-.guide{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    
+.guide {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-.forgot{
-    margin-top: -30px;
+.forgot {
+  margin-top: -30px;
 }
-
 
 // 新規登録
-#margin_top{
-    margin: 80px auto 0 auto;
+#margin_top {
+  margin: 80px auto 0 auto;
 }
 
-
-
 // member catalog
-.post{
-    font-size: 1.5rem;
+.post {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  padding-bottom: 10px;
+  @include mq-down(md) {
+    margin-left: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+  }
 }
 // 荒野名
 // .control{
 //     font-size: 2rem!important;
 // }
-.actions{
-    margin-top: 60px;
+.actions {
+  margin-top: 60px;
 }
-.write_space{
-    width: 50%;
-    margin: 0 auto;
+.write_space {
+  width: 50%;
+  margin: 0 auto;
 }
-.small_login{
-    font-size: 1.5rem;
+.small_login {
+  font-size: 1.5rem;
 }
 // My page
-.my_contents{
-    width: 50%;
+.my_contents {
+  width: 50%;
 }
-.card-image{
-    margin: 0 auto;
+.card-image {
+  margin: 0 auto;
 }

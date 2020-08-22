@@ -12,7 +12,7 @@
     <div class="profile">  
       <div class="card-image">
         <figure class="top_image" style="margin-left: auto; margin-right: auto;"> 
-          <%= attachment_image_tag @user, :profile_image, :fill, 1000,1000,fallback: "no-image.png", class: "profile_image is-rounded" %>
+          <div><%= attachment_image_tag @user, :profile_image, :fill, 1000,1000,fallback: "no-image.png", class: "profile_image is-rounded" %>
         </figure>
       </div>
 

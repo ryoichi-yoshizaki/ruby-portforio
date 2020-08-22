@@ -17,7 +17,7 @@
              <div class="card-image">
               <figure class="image"> 
                <%= link_to user_path(user) do %>
-                <%= attachment_image_tag user, :profile_image, :fill, 1000,1000, fallback: "no-image.png"%>
+                <div class="circle_img"><%= attachment_image_tag user, :profile_image, :fill, 1000,1000, fallback: "no-image.png"%></div>
                <% end %>
               </figure>
              </div>
