@@ -21,18 +21,14 @@ $breakpoints: (
 .title_one {
   font-family: "Caveat", cursive;
   color: white;
-  font-size: 4rem;
+  font-size: 2.5rem;
   @include mq-down(md) {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 }
 .profile {
   width: 100%;
-  .top_image {
-    width: 60%;
-    height: 60%;
-    margin: 0 20% !important;
-  }
+
   .profile_edit {
     position: relative;
     margin: 60px auto 0 auto;
@@ -40,28 +36,34 @@ $breakpoints: (
     height: 400px;
     width: 50%;
     overflow: scroll;
+    border-top-left-radius: 7%;
+    border-top-right-radius: 7%;
     @include mq-down(md) {
-        height: 250px;
-        width: 70%;
-      }
+      height: 250px;
+      width: 70%;
+    }
     .profs {
       position: absolute;
       top: 10%;
       left: 13%;
       width: 100%;
+      // 名前
       .name {
         font-size: 2rem;
         font-weight: bold;
         word-wrap: break-word;
+        width: 80%;
+        color: rgb(65, 138, 247);
         @include mq-down(md) {
-          font-size: 1.8rem;
-          
+          font-size: 1.5rem;
         }
       }
+      // Profile
       .self_intro {
         font-size: 2rem;
         font-weight: bold;
         font-family: $font_simple;
+        color: rgb(43, 190, 38);
         @include mq-down(md) {
           font-size: 1.4rem;
         }
@@ -84,8 +86,8 @@ $breakpoints: (
     text-align: center;
     padding-top: 25px;
     @include mq-down(md) {
-        width: 70%;
-      }
+      width: 70%;
+    }
     .email {
       font-size: 2rem;
       overflow: scroll;
@@ -100,25 +102,24 @@ $breakpoints: (
         font-size: 1rem;
       }
     }
-    
   }
 }
-.card .media:not(:last-child){
-    @include mq-down(md) {
-        margin-left: 0;
-      }     
+.card .media:not(:last-child) {
+  @include mq-down(md) {
+    margin-left: 0;
+  }
 }
 // この内容を編集する
 .henshu_button {
-  font-size: 2rem;
+  font-size: 1.5rem;
   @include mq-down(md) {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 }
 .delete_button {
-  font-size: 2rem;
+  font-size: 1.5rem;
   @include mq-down(md) {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 }
 .times {
@@ -128,12 +129,15 @@ $breakpoints: (
     font-size: 1rem;
   }
 }
-.card-content{
-    padding: 0!important;
-    @include mq-down(md) {
-        padding: 0!important;
-      }
+.card-content {
+  padding: 0 !important;
+  
+  @include mq-down(md) {
+    padding: 0 !important;
+  }
 }
+// 阪神タイガース優勝するrecipes.scssへ飛ぶ
+
 
 // Login menu
 .login_gamen {
@@ -182,6 +186,16 @@ $breakpoints: (
     font-size: 1.2rem;
   }
 }
+.catalog_img{
+  border-top-left-radius: 7%;
+  border-top-right-radius: 7%;
+  
+}
+.card{
+  border-top-left-radius: 7%;
+  border-top-right-radius: 7%;
+}
+
 // 荒野名
 // .control{
 //     font-size: 2rem!important;

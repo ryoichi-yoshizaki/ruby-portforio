@@ -27,6 +27,14 @@ $font_simple :Cambria ,Cochin, Georgia, Times, 'Times New Roman', serif;
 .card-font{
     color: red;
 }
+.media-left{
+    margin-left: 1rem;
+  }
+.image{
+    border-top-left-radius: 7%;
+  border-top-right-radius: 7%;
+  
+}
 .wilderness_img{
     margin-top: 20px;
 }
@@ -36,34 +44,42 @@ $font_simple :Cambria ,Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 1rem;
      }
 }
-.times{
-    font-size: 2rem;
+.recipes_times{
+    font-size: 1rem;
+    padding: 0 0 5px 10px;
 }
 .title{
     font-size: 3rem;
     font-family: 'Caveat', cursive;
+    margin-left: 10px;
 }
-// 阪神タイガース優勝する
+// 阪神タイガース優勝するuser.scss
 .my_title{
     font-size: 2.5rem;
     font-weight: bold;
+    color: rgb(65, 138, 247);
     @include mq(md) {  
         font-size: 1.5rem;
      }
-}
-// この内容を編集するはusers.scssへ
-
+  }
+  
 // Details
 .intro_by_name{
-    background-color: #fff;
     .comment{
         font-size: 2rem;
         overflow: scroll;
         width: 90%;
         margin: 30px auto 0 auto;
+        @include mq(md) {  
+            font-size: 1.5rem;
+            margin-top: 10px;
+         }
     }
     .by_name{
         font-size: 2rem;
+        @include mq(md) {  
+            font-size: 1.5rem;
+         }
     }
 }
 .details_content{
@@ -75,15 +91,16 @@ $font_simple :Cambria ,Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
     text-align: center;
     word-wrap: break-word;
+    color: rgb(65, 138, 247);
 }
 .to_page{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 .news{
     font-size: 2rem;
     text-align: center;
     font-family: $font_simple;
-
+    color: rgb(43, 190, 38);
 }
 .news_content{
     font-size: 2rem;

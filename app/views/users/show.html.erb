@@ -9,13 +9,8 @@
 </section>
 
 <section class="section"> 
-    <div class="profile">  
-      <div class="card-image">
-        <figure class="top_image" style="margin-left: auto; margin-right: auto;"> 
-          <div><%= attachment_image_tag @user, :profile_image, :fill, 1000,1000,fallback: "no-image.png", class: "profile_image is-rounded" %>
-        </figure>
-      </div>
-
+    <div class="profile">         
+      <%= attachment_image_tag @user, :profile_image, size: "100px*100px",fallback: "no-image.png", class: "profile_image is-rounded" %>
       <div class="profile_edit">
         <div class="profs">
           <p class="name"><%= @user.username %></p>
@@ -51,8 +46,7 @@
             </div>
             <div class="card-content">
               <div class="media">
-                <div class="media-content">
-                  
+                <div class="media-content"> 
                   <%= link_to recipe_path(recipe), class: "panel-block" do %>
                     <%#<span class="panel-icon"><i class="fas fa-book"></i></span>%>
                     <p class="my_title"><%= recipe.title %></p>

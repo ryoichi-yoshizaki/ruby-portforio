@@ -40,24 +40,24 @@
         <div id="navbarExampleTransparentExample"  class="navbar-menu  collapse top-menu" >
             
             <div class="navbar-item">
-              <%= link_to "メンバーニュース一覧", recipes_path, class: " button is-warning is-light mt-4 mb-4" %>
+              <%= link_to "メンバーニュース一覧", recipes_path, class: " button is-warning is-light app_button" %>
             </div>
             <div class="navbar-item">
-              <%= link_to "個人ニュース投稿", new_recipe_path, class: " button is-warning is-light mt-4 mb-4" %>
+              <%= link_to "個人ニュース投稿", new_recipe_path, class: " button is-warning is-light app_button" %>
             </div>
             <div class="navbar-item">
                   <p class="member">
-                    <%= link_to "メンバープロフィール一覧", users_path, class: " button is-warning is-light mt-4 mb-4" %>
+                    <%= link_to "メンバープロフィール一覧", users_path, class: " button is-warning is-light app_button" %>
                   </p>
             </div>
             <div class="navbar-item">
                   <p class="member">
-                    <%= link_to "プロフィール", user_path(current_user), class: "button is-warning is-light mt-4 mb-4" %>
+                    <%= link_to "プロフィール", user_path(current_user), class: "button is-warning is-light app_button" %>
                   </p>
             </div>
             <div class="navbar-item">
                     <p class="member">
-                      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: " button is-warning is-light mt-4 mb-4" %>
+                      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: " button is-warning is-light app_button" %>
                     </p>
             </div>
             <%
