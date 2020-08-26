@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :recipes, dependent: :destroy
   attachment :profile_image
-
+  
   validates :username,presence: true
 end
 # enum is_active: {Available: true, Invalid: false}

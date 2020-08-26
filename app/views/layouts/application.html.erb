@@ -59,17 +59,7 @@
                     <p class="member">
                       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: " button is-warning is-light app_button" %>
                     </p>
-            </div>
-            <%
-=begin%>
- <div class="navbar-item">
-                    <p class="member">
-                      <%= link_to "新規登録", new_user_registration_path, class: "button is-warning is-light mt-4 mb-4" %> 
-                    </p>
-            </div> 
-<%
-=end%>
-            
+            </div>   
       <% else %>
         <div id="navbarExampleTransparentExample" class="navbar-menu top-menu">
           <div class="navbar-item">
@@ -79,7 +69,7 @@
           </div>
           <div class="navbar-item">
             <p class="member">
-              <%= link_to "メンバー一覧", users_path, class: "navbar-item button is-warning is-light mt-4 mb-4" %>
+              <%= link_to "メンバープロフィール一覧", users_path, class: "navbar-item button is-warning is-light mt-4 mb-4" %>
             </p>
           </div>
           <div class="navbar-item ">              
