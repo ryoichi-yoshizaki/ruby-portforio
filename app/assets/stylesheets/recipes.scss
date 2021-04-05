@@ -42,6 +42,7 @@ $font_simple :Cambria ,Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1rem;
     @include mq(md) {  
         font-size: 1rem;
+        
      }
 }
 .recipes_times{
@@ -86,8 +87,11 @@ $font_simple :Cambria ,Cochin, Georgia, Times, 'Times New Roman', serif;
     width: 100%;
     margin-top: 50px;
 }
+.content{
+    padding: 5px;
+}
 .prof_title{
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
     word-wrap: break-word;
@@ -97,15 +101,19 @@ $font_simple :Cambria ,Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1.2rem;
 }
 .news{
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-align: center;
     font-family: $font_simple;
     color: rgb(43, 190, 38);
 }
 .news_content{
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
 }
+.edit-button{
+    padding: 0 10px;
+}
+
 .font_s{
     font-size: 2rem;
 }

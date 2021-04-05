@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  # ユーザーがレシピを多く持つ、ユーザーが削除されたらレシピも削除する
   has_many :recipes, dependent: :destroy
   attachment :profile_image
   

@@ -9,11 +9,10 @@
 </section>
 
 <section class="section">
-  <div class="">
       <div class="intro_by_name">
         <article class="panel is-link">
           <div class="panel-heading by_name">
-            By <%= @recipe.user.username %>
+            <%= @recipe.user.username %>さんの詳細
           </div>
           <div class="panel-block">
             <p class="comment">
@@ -43,7 +42,7 @@
               </div>
             </div>
             <div class="content">
-              <table class="table is-narrow">
+              <table class="table">
                 <tr>
                   <th class="news">News</th>
                 </tr>
@@ -51,15 +50,13 @@
                   <td class="news_content"><%= simple_format @recipe.body %></td>
                 </tr>
               </table>
+              <div class="edit-button">
               <% if @recipe.user.id == current_user.id %>
-                <%= link_to "編集画面へ", edit_recipe_path(@recipe), class: "button is-success" %>
+                <%= link_to "編集画面へ", edit_recipe_path(@recipe), class: "button is-white-50" %>
               <% end %>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      
-    
-  </div>
 </section>

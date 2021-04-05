@@ -122,6 +122,7 @@ $sentence: 50px;
     background-repeat: no-repeat;
     height: 400px;
     width: 80%;
+    margin-top: 20px;
     @include mq(md) {
         height: 300px;
       }

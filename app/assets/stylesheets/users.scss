@@ -18,6 +18,10 @@ $breakpoints: (
   height: 100%;
   margin-top: 60px;
 }
+.my_contents{
+  margin-top: 10px;
+  margin: 10px auto 0 auto;
+}
 .title_one {
   font-family: "Caveat", cursive;
   color: white;
@@ -103,6 +107,9 @@ $breakpoints: (
       }
     }
   }
+}
+.card{
+  max-height: 60%;
 }
 .card .media:not(:last-child) {
   @include mq-down(md) {

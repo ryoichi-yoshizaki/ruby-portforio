@@ -7,13 +7,14 @@ class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find(params[:id])
   end
-
+# レシピモデルから空のモデルを持ってくる
   def new
     @recipe = Recipe.new
   end
-
+# データベースに保存
   def create
     @recipe = Recipe.new(recipe_params)
+    # 誰が投稿したのかを示す
     @recipe.user_id = current_user.id
     if @recipe.save
      redirect_to recipe_path(@recipe),notice:"投稿成功"
@@ -26,7 +27,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @user = User.new
     if @recipe.user != current_user
-      redirect_to recipes_path, alert: "違う人のプロフィールはイじれません、自分のをイじってください"
+      redirect_to recipes_path, alert: "異なるメンバーからの操作です"
     end
   end
   

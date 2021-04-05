@@ -10,8 +10,9 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    binding.pry
     if @user != current_user
-      redirect_to users_path,alert:"違う人のプロフィールはイじれません、自分のをイじってください"
+      redirect_to users_path,alert:"異なるメンバーのプロフィールは操作できません"
     end
   end
   
@@ -24,7 +25,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-    redirect_to user_path(@user),notice:"新しくなったよ"
+    redirect_to user_path(@user),notice:"更新完了"
     else
       render :edit
     end
