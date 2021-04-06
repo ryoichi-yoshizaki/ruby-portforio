@@ -75,10 +75,10 @@ $breakpoints: (
       .comment {
         width: 80%;
         word-wrap: break-word;
-        font-size: 2rem;
-        @include mq-down(md) {
-          font-size: 1.3rem;
-        }
+        font-size: 1rem;
+        // @include mq-down(md) {
+        //   font-size: 1rem;
+        // }
       }
     }
   }
@@ -93,7 +93,7 @@ $breakpoints: (
       width: 70%;
     }
     .email {
-      font-size: 2rem;
+      font-size: 1rem;
       overflow: scroll;
       @include mq-down(md) {
         font-size: 1rem;
@@ -138,10 +138,13 @@ $breakpoints: (
 }
 .card-content {
   padding: 0 !important;
-  
-  @include mq-down(md) {
-    padding: 0 !important;
-  }
+  // @include mq-down(md) {
+  //   padding: 0 !important;
+  // }
+}
+.media{
+  background-color: #fff;
+  padding: 10px 10px 0 0;
 }
 // 阪神タイガース優勝するrecipes.scssへ飛ぶ
 

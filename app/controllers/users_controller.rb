@@ -10,7 +10,6 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
-    binding.pry
     if @user != current_user
       redirect_to users_path,alert:"異なるメンバーのプロフィールは操作できません"
     end

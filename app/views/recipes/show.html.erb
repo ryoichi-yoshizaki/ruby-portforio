@@ -51,9 +51,9 @@
                 </tr>
               </table>
               <div class="edit-button">
-              <% if @recipe.user.id == current_user.id %>
-                <%= link_to "編集画面へ", edit_recipe_path(@recipe), class: "button is-white-50" %>
-              <% end %>
+                <% if @recipe.user.id == current_user.id %>
+                  <%= link_to "編集画面へ", edit_recipe_path(@recipe), class: "button is-white-50" %>
+                <% end %>
               </div>
             </div>
           </div>

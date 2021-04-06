@@ -53,6 +53,9 @@ $font_simple :Cambria ,Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 3rem;
     font-family: 'Caveat', cursive;
     margin-left: 10px;
+    @include mq(md){
+        display: none;
+    }
 }
 // 阪神タイガース優勝するuser.scss
 .my_title{
@@ -67,17 +70,18 @@ $font_simple :Cambria ,Cochin, Georgia, Times, 'Times New Roman', serif;
 // Details
 .intro_by_name{
     .comment{
-        font-size: 2rem;
+        font-size: 1.2rem;
         overflow: scroll;
+        height: 100px;
         width: 90%;
-        margin: 30px auto 0 auto;
+        margin: 10px auto 0 auto;
         @include mq(md) {  
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-top: 10px;
          }
     }
     .by_name{
-        font-size: 2rem;
+        font-size: 1.2rem;
         @include mq(md) {  
             font-size: 1.5rem;
          }
@@ -87,7 +91,11 @@ $font_simple :Cambria ,Cochin, Georgia, Times, 'Times New Roman', serif;
     width: 100%;
     margin-top: 50px;
 }
-.content{
+.media{
+    background-color: #fff;
+    padding: 10px 10px 0 0;
+}
+.update-day{
     padding: 5px;
 }
 .prof_title{
@@ -111,7 +119,7 @@ $font_simple :Cambria ,Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
 }
 .edit-button{
-    padding: 0 10px;
+    padding: 0 10px 10px 10px;
 }
 
 .font_s{
