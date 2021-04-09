@@ -77,3 +77,7 @@ end
 
 gem 'annotate'
 
+# 追加（AWS登録時）
+group :production do
+  gem 'unicorn', '5.4.1'
+end
