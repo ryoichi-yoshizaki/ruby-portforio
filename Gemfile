@@ -81,3 +81,7 @@ gem 'annotate'
 group :production do
   gem 'unicorn', '5.4.1'
 end
+
+#S3の操作
+gem 'carrierwave'
+gem 'fog'
